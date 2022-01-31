@@ -22,7 +22,7 @@ echo $codearttoken
 
 cd $mvndir
 
-sed  "s/mytoken/$codearttoken/" mvn/settings.xml > /result.xml
+sed  "s/mytoken/$codearttoken/" mvn/settings_github.xml > /result.xml
 
 cat /result.xml
 
