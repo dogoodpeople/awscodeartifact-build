@@ -1,13 +1,13 @@
 FROM amazoncorretto:17
 
 
-RUN apt-get update && apt-get install -y curl && apt-get install unzip 
+RUN apk update && apk add -y curl && apk add unzip 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
 RUN ./aws/install
 
-RUN apt update
-RUN apt install -y maven
+RUN apk update
+RUN apk add -y maven
 
 COPY entrypoint.sh /entrypoint.sh
 
