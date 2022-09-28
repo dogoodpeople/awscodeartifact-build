@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM amazoncorretto:17
 
 
 RUN apt-get update && apt-get install -y curl && apt-get install unzip 
